@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;700&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@100;200;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400;1,800;1,900&display=swap");
+
+$font1: 'Alkatra', cursive;
+$font2: 'Fira Sans', sans-serif;
+$font3: 'Inter', sans-serif;
+$font4: 'Poppins', sans-serif;
+
+$color1: #00130b;
+$color2: #d5d4d4;
+$color3: rgb(23, 204, 23);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+.profil-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+nav {
+  margin-bottom: 40px;
+
+  a {
+    text-decoration: none;
+    color: $color2;
+    margin: 0 30px;
+    font-family: $font3;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  ul {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+}
+
+.fa-circle-down {
+  font-size: 1.4rem;
+  margin: 0px 10px;
+}
+
+button {
+  cursor: pointer;
+  transition: .3s ease;
+  padding: 10px;
+  font-family: $font4;
+  border-radius: 18px;
+  border: 1px solid rgba(245, 245, 245, 0.42);
+  color: $color2;
+  background: rgb(14, 18, 23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+.border {
+  border-bottom: 1px solid #faf8f8;
+  width: 40%;
+  margin: 5px auto;
+  opacity: .5;
+}
+
+
+
+
+
+.projets-container {
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 45%);
+  gap: 10px;
+
+  @media screen and (max-width:1100px) {
+    grid-template-columns: 80%;
+
+
+  }
+}
+
+h2 {
+  font-family: $font2;
+  color: $color2;
+  text-align: center;
+  margin: 20px;
+}
+
+.project {
+  height: 250px;
+  color: $color2;
+  position: relative;
+  margin: 10px;
+
+  &:hover .content {
+    position: absolute;
+    opacity: .9;
+    transition: .3s ease;
+  }
+
+  .content {
+    cursor: pointer;
+    position: absolute;
+    transition: .3s ease;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: #333;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font4;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    min-width: 100px;
+  }
+}
+
+
+.contact {
+
+  form {
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+
+  }
+
+  label {
+    font-size: .8rem;
+    font-family: $font3;
+    color: $color2;
+    margin: 3px;
+
+
+  }
+
+  textarea {
+    border-radius: 10px;
+    width: 300px;
+    height: 100px;
+    font-size: 1rem;
+    font-family: $font2;
+    outline: none;
+    border: transparent;
+  }
+
+  input[type=text],
+  input[type=email] {
+    margin: 4px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 1rem;
+    font-family: $font2;
+    outline: none;
+    border: transparent;
+    transition: .3s ease;
+
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+
+  input[type=button] {
+    width: 50%;
+    color: $color2;
+    background: #1a1d48;
+    margin: 4px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+    font-size: 1rem;
+    font-family: $font2;
+    outline: none;
+    border: transparent;
+    cursor: pointer;
+  }
+}
+
+.propos-moi {
+  color: $color2;
+  font-family: $font4;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 1;
+
+  strong {
+    font-family: $font4;
+    color: $color3;
+  }
+
+  .first {
+    margin: 10px 0;
+  }
+}
+
+//rgb(16 23 31)
+.header-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  padding: 16px;
+
+  h1 {
+    text-align: center;
+  }
+
+  .networks {
+    display: flex;
+    margin: 5px;
+    margin: 10px auto;
+    justify-content: center;
+
+    i {
+      margin: 10px 10px;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: .3s ease;
+
+      &:hover {
+        transform: scale(1.09);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-family: $font2;
+    margin: 10px auto;
+  }
+
+  strong {
+    font-family: $font4;
+    color: $color3;
+  }
+
+
+  color: $color2;
+  font-family: $font4;
+}
