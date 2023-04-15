@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <ul>
-        <a href="#propos">A propos</a>
-        <a href="#form">Me contacter</a>
+        <NavLink to={"#propos"}>A propos</NavLink>
+        <NavLink to={"#form"}>Me contacter</NavLink>
         <NavLink onClick={() => toogleTheme()}>
           <i className="fa-sharp fa-solid fa-lightbulb"></i>
         </NavLink>
@@ -17,5 +17,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
