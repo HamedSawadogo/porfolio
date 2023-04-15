@@ -1,24 +1,44 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 const Form = () => {
-  const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [email, setEmail] = useState("");
+  const [userName, setUsername] = useState("");
+  const [message, setMessage] = useState("");
+  const [isDisabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    setDisabled(userName.length > 0 && email.length > 0 && message.length > 0);
+  }, [email, userName, message]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const message = {
-      username: formRef.current.username.value,
-      mail: formRef.current.email.value,
-      message: formRef.current.message.value,
-    };
-    console.log(message);
-    formRef.current.reset();
+    if (userName.length > 0 && email.length > 0 && message.length > 0) {
+      const Objmessage = {
+        username: userName,
+        mail: email,
+        message: message,
+      };
+      console.log(Objmessage);
+      setDisabled(false);
+      setEmail("");
+      setMessage("");
+      setUsername("");
+      setError(false);
+    } else {
+      setError(true);
+    }
   };
   return (
-    <form id="form" ref={formRef} onSubmit={(e) => handleSubmit(e)}>
+    <form id="form" onSubmit={(e) => handleSubmit(e)}>
+      {error && <p>Veillez bien envoyer votre message</p>}
       <label htmlFor="name">votre nom</label>
       <input
         type="text"
         placeholder="votre nom"
         name="username"
+        value={userName}
+        onChange={(e) => setUsername(e.target.value)}
         autoComplete="off"
       />
       {/* email */}
@@ -28,6 +48,8 @@ const Form = () => {
         placeholder="votre adresse mail"
         name="email"
         autoComplete="off"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <label htmlFor="message">votre Message</label>
       <textarea
@@ -36,8 +58,12 @@ const Form = () => {
         cols="10"
         rows="10"
         placeholder="votre message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
       ></textarea>
-      <button>envoyer</button>
+      <button id="send" disabled={!isDisabled}>
+        envoyer
+      </button>
     </form>
   );
 };

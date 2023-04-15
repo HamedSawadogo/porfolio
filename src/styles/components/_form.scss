@@ -1,5 +1,11 @@
 form {
 
+   p {
+      color: red;
+      font-size: 1.1rem;
+      text-align: center;
+   }
+
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -52,6 +58,10 @@ form {
    }
 
    button {
+      &:disabled {
+         opacity: .6;
+      }
+
       padding: 6px;
       background: $color1;
       color: $color3;
