@@ -1,0 +1,31 @@
+.navbar {
+   width: 80%;
+   justify-content: center;
+   margin: 0 auto;
+
+   ul {
+      height: 50px;
+      background: $header;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: $color3;
+      font-family: $font2;
+   }
+
+   .nav-active {
+      text-decoration: none;
+      font-size: 1rem;
+      color: $color3;
+      font-family: $font2;
+      transition: 0.3s ease;
+      border-bottom: 2px solid $color1;
+   }
+
+
+}

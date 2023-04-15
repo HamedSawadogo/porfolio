@@ -1,17 +1,34 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { ThemeContext } from "../ThemeProvider";
+import Form from "./Form";
 
 const Navbar = () => {
-  const { theme, toogleTheme } = useContext(ThemeContext);
-  console.log(theme);
   return (
     <nav className="navbar">
       <ul>
-        <NavLink to={"#propos"}>A propos</NavLink>
-        <NavLink to={"#form"}>Me contacter</NavLink>
-        <NavLink onClick={() => toogleTheme()}>
-          <i className="fa-sharp fa-solid fa-lightbulb"></i>
+        <NavLink
+          to={"/"}
+          className={(nav) => (nav.isActive ? "nav-item" : "nav-active")}
+        >
+          Home
+        </NavLink>
+        {/* <NavLink
+          to={"#propos"}
+          className={(nav) => (nav.isActive ? "nav-item" : "nav-active")}
+        >
+          About
+        </NavLink> */}
+        <NavLink
+          to={"/portfolio"}
+          className={(nav) => (nav.isActive ? "nav-item" : "nav-active")}
+        >
+          Porfolio
+        </NavLink>
+        <NavLink
+          to={"/contact"}
+          className={(nav) => (nav.isActive ? "nav-item" : "nav-active")}
+        >
+          Contact Me
         </NavLink>
       </ul>
     </nav>

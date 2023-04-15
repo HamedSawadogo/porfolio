@@ -1,0 +1,73 @@
+form {
+
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   width: 500px;
+   margin: 0 auto;
+
+   @media screen and (max-width:550px) {
+      width: 80%;
+
+   }
+
+   label {
+      font-family: $font2;
+      color: $color3;
+      margin: 5px 0;
+
+   }
+
+   input {
+      padding: 9px;
+      font-family: $font2;
+      border-radius: 7px;
+      transition: .3s ease;
+      border: transparent;
+      outline: none;
+
+      &:hover {
+         transform: scale(1.033);
+      }
+
+      &:focus {
+         border: 2px solid $color1;
+         outline: none;
+      }
+
+   }
+
+   textarea {
+      border-radius: none;
+      padding: 8px;
+      font-family: $font2;
+      color: $color1;
+      border-radius: 7px;
+      height: 100px;
+      transition: .3s ease;
+      margin: 10px 0;
+      border: transparent;
+      outline: none;
+
+   }
+
+   button {
+      padding: 6px;
+      background: $color1;
+      color: $color3;
+      font-family: $font3;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      outline: none;
+      transition: .3s ease;
+      cursor: pointer;
+
+      &:hover {
+         background: $color3;
+         color: $color1;
+         transition: .3s;
+         transform: scale(1.099);
+      }
+   }
+}
