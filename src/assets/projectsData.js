@@ -1,7 +1,6 @@
 import img1 from "./images/MealsApp.png";
 import img2 from "./images/items.png";
 import img3 from "./images/plantApp.png";
-import img4 from "./images/blog.png";
 import img5 from "./images/cine.png";
 import im6 from "./images/HeaderResto.jpg";
 import im7 from "./images/Gaming.jpg";

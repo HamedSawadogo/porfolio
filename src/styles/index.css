@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;700&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Inter:wght@100;200;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: rgb(15, 17, 19);
+}
+
+.profil-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.header-container .header {
+  background: url(../../assets/images/photo-1523800503107-5bc3ba2a6f81.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 100vh;
+  width: 100%;
+}
+@media only screen and (max-width: 700px) {
+  .header-container {
+    grid-template-columns: 1fr;
+  }
+  .header-container .header {
+    height: 50vh;
+  }
+}
+.header-container .about {
+  margin: 30px 0;
+  text-align: center;
+}
+.header-container .about button {
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  border: transparent;
+  padding: 7px;
+  background: rgb(102, 126, 234);
+  margin: 30px 0;
+}
+.header-container .about button:hover {
+  transform: scale(1.1);
+}
+.header-container .about button a {
+  text-decoration: none;
+  color: rgb(203, 213, 224);
+  font-size: 1.1rem;
+  font-family: "Alkatra", cursive;
+  transition: 0.3s ease;
+}
+.header-container .about p {
+  margin: 20px;
+  text-align: center;
+}
+.header-container .about h3 {
+  text-align: center;
+  color: rgb(203, 213, 224);
+  font-family: "Fira Sans", sans-serif;
+  width: 70%;
+  margin: 0 auto;
+}
+.header-container .about h1,
+.header-container .about h2,
+.header-container .about h3 p {
+  color: rgb(203, 213, 224);
+  font-family: "Fira Sans", sans-serif;
+}
+.header-container .about h2 {
+  margin: 10px 0;
+}
+
+.navbar {
+  width: 80%;
+  justify-content: center;
+  margin: 0 auto;
+}
+.navbar ul {
+  height: 50px;
+  background: rgb(15, 17, 19);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(203, 213, 224);
+  font-family: "Fira Sans", sans-serif;
+}
+.navbar .nav-active {
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(203, 213, 224);
+  font-family: "Fira Sans", sans-serif;
+  transition: 0.3s ease;
+  border-bottom: 2px solid rgb(102, 126, 234);
+}
+
+.button {
+  font-family: "Fira Sans", sans-serif;
+  color: rgb(203, 213, 224);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+form p {
+  color: red;
+  font-size: 1.1rem;
+  text-align: center;
+}
+@media screen and (max-width: 550px) {
+  form {
+    width: 80%;
+  }
+}
+form label {
+  font-family: "Fira Sans", sans-serif;
+  color: rgb(203, 213, 224);
+  margin: 5px 0;
+}
+form textarea {
+  border-radius: none;
+  padding: 8px;
+  font-family: "Fira Sans", sans-serif;
+  color: rgb(102, 126, 234);
+  border-radius: 7px;
+  height: 100px;
+  transition: 0.3s ease;
+  margin: 10px 0;
+  border: transparent;
+  outline: none;
+}
+
+.projets {
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.projets .project {
+  height: 200px;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+}
+.projets .project:hover .content {
+  opacity: 0.9;
+}
+.projets .project .content {
+  transition: 0.3s ease;
+  position: absolute;
+  background: #333;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  color: rgb(203, 213, 224);
+  font-family: "Alkatra", cursive;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.projets img {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  font-family: "Alkatra", cursive;
+  color: rgb(203, 213, 224);
+  text-align: center;
+  margin: 30px;
+}/*# sourceMappingURL=index.css.map */
