@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Alert from "@mui/material/Alert";
+import React from "react";
+import { useState, useEffect } from "react";
 
-const Form = () => {
+const From = () => {
   const [error, setError] = useState(false);
   const [email, setEmail] = useState("");
   const [userName, setUsername] = useState("");
@@ -34,59 +31,42 @@ const Form = () => {
     }
   };
   return (
-    <form id="form" onSubmit={(e) => handleSubmit(e)}>
-      {error && (
-        <Alert severity="error">Veillez bien saisir vos informations</Alert>
-      )}
-      <label htmlFor="name">votre nom</label>
-      {/* <input
-        type="text"
-        placeholder="votre nom"
-        name="username"
-        autoComplete="off"
-      /> */}
-      <TextField
-        fullWidth
-        color="success"
-        variant="outlined"
-        id="outlined-error"
-        label="Error"
-        defaultValue="entrer votre nom"
-        value={userName}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      {/* email */}
-      <label htmlFor="email">votre adresse mail</label>
-      {/* <input
-        type="email"
-        placeholder="votre adresse mail"
-        name="email"
-        autoComplete="off"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      /> */}
-      <TextField
-        id="outlined-error"
-        label="Error"
-        defaultValue="entrer votre adresse mail"
-        value={userName}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <label htmlFor="message">votre Message</label>
-      <textarea
-        name="message"
-        id=""
-        cols="10"
-        rows="10"
-        placeholder="votre message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-      <Button type="submit" variant="contained" disabled={isDisabled}>
-        Me contacter
-      </Button>
-    </form>
+    <>
+      <h3>Me contacter</h3>
+      <form onSubmit={(e) => handleSubmit(e)} action="" className="formulaire">
+        <input
+          type="text"
+          name="username"
+          placeholder="votre nom"
+          autoComplete="off"
+          value={userName}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          id=""
+          placeholder="votre email"
+          autoComplete="off"
+          required
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
+        <textarea
+          name=""
+          id=""
+          placeholder="votre message"
+          $
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          cols="30"
+          rows="10"
+        ></textarea>
+        <button type="submit">Me Contacter</button>
+      </form>
+    </>
   );
 };
 
-export default Form;
+export default From;

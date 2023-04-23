@@ -1,0 +1,38 @@
+h3 {
+   text-align: center;
+   font-family: $font4;
+   color: $color3;
+   margin: 10px auto;
+   border-bottom: 2px solid $color1;
+   width: 160px;
+}
+
+.about-container {
+   .about {
+      width: 80%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 60% 40%;
+      margin: 30px auto;
+      gap: 20px;
+
+
+
+      .about-left {
+         font-family: $font4;
+         color: $color3;
+         text-align: center;
+         opacity: .7;
+         text-align: left;
+      }
+
+      .about-right {
+         img {
+            display: block;
+            width: 60%;
+            min-width: 30%;
+            height: 250px;
+         }
+      }
+   }
+}

@@ -1,0 +1,23 @@
+.navigation {
+   background: $color1;
+   position: fixed;
+   width: 100%;
+   z-index: 10000;
+
+   .items-container {
+      width: 70%;
+      display: flex;
+      height: 55px;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   a {
+      margin: 0 10px;
+      color: $color3;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-family: $font4;
+   }
+}
