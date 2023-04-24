@@ -22,6 +22,12 @@ const Navbar = () => {
           Accueil
         </NavLink>
         <NavLink
+          to={"/portfolio"}
+          className={(nav) => (nav.isActive ? "nav-active" : "nav")}
+        >
+          Portfolio
+        </NavLink>
+        <NavLink
           to={"/contact"}
           className={(nav) => (nav.isActive ? "nav-active" : "nav")}
         >

@@ -9,7 +9,7 @@
       color: $color3;
       margin: 50px auto;
       width: 160px;
-      border-bottom: 3px solid #1cc;
+      border-bottom: 3px solid $color1;
       display: block;
       padding: 10px;
    }
@@ -63,7 +63,7 @@
          padding: 10px;
          margin: 5px 0;
          color: #f1f1f1;
-         background: #1cc;
+         background: $color1;
          border-radius: 5px;
          border: transparent;
          font-size: 1.1rem;

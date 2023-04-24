@@ -7,18 +7,6 @@ import im7 from "./images/Gaming.jpg";
 
 export const projectsData = [
   {
-    img: img2,
-    title: "E-commerce",
-    description: "Application de vente en ligne",
-    technos: ["react js", "BrowserRouter", "axios", "scss", "redux"],
-  },
-  {
-    img: img3,
-    title: "Plant-App",
-    description: "Application de vente  de plante en ligne",
-    technos: ["react js", "redux"],
-  },
-  {
     img: img5,
     title: "Actualités App",
     description: "Application d'actualités",

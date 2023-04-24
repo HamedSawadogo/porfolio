@@ -2,14 +2,16 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import About from "./components/About";
-import Form from "./components/Form";
+import Portfolio from "./pages/Portfolio";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
       <Navbar />
       <Header />
       <About />
-      <Form />
+      <Portfolio />
+      <Footer />
     </div>
   );
 };

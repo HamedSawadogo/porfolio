@@ -38,20 +38,15 @@
 
       .about-right {
          img {
-            // object-fit: cover;
+            object-fit: cover;
             display: block;
             width: 100%;
             min-width: 30%;
             height: 300px;
-            opacity: .6;
             background: paleturquoise;
             transition: .4s ease;
             cursor: pointer;
-            box-shadow: 15px -11px 3px 0px #1ec;
-
-            &:hover {
-               opacity: 1;
-            }
+            box-shadow: 15px -11px 3px 0px $color1;
          }
       }
    }

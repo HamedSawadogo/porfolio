@@ -29,7 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1px;
-  background: #1cc;
+  background: #11c784;
   position: fixed;
 }
 .navigation .fa-bar {
@@ -110,7 +110,7 @@ body {
 }
 .profil-container .profil h2::after {
   content: "javascript Réact Js,Rédux,typeScript";
-  color: #1cc;
+  color: #11c784;
   margin: 0 7px;
 }
 @media screen and (max-width: 700px) {
@@ -164,7 +164,7 @@ body {
   cursor: pointer;
   color: rgb(245, 247, 249);
   font-family: "Poppins", sans-serif;
-  background: #1cc;
+  background: #11c784;
   border: none;
   border-radius: 15px;
   transition: 0.3s ease;
@@ -178,7 +178,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: rgb(245, 247, 249);
   margin: 10px auto;
-  border-bottom: 2px solid #1cc;
+  border-bottom: 2px solid #11c784;
   width: 160px;
 }
 
@@ -206,6 +206,8 @@ body {
   text-align: left;
 }
 .about-container .about .about-right img {
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   width: 100%;
   min-width: 30%;
@@ -214,7 +216,7 @@ body {
   background: paleturquoise;
   transition: 0.4s ease;
   cursor: pointer;
-  box-shadow: 15px -11px 3px 0px #1ec;
+  box-shadow: 15px -11px 3px 0px #11c784;
 }
 .about-container .about .about-right img:hover {
   opacity: 1;
@@ -230,7 +232,7 @@ body {
   color: rgb(245, 247, 249);
   margin: 50px auto;
   width: 160px;
-  border-bottom: 3px solid #1cc;
+  border-bottom: 3px solid #11c784;
   display: block;
   padding: 10px;
 }
@@ -285,7 +287,7 @@ body {
   padding: 10px;
   margin: 5px 0;
   color: #f1f1f1;
-  background: #1cc;
+  background: #11c784;
   border-radius: 5px;
   border: transparent;
   font-size: 1.1rem;
@@ -322,4 +324,84 @@ body {
 }
 .networks-container i:hover {
   transform: translateY(-5px);
+}
+
+.project-container {
+  padding: 10px;
+  width: 80%;
+  margin: 30px auto;
+  border: 1px solid rgba(241, 241, 241, 0.368627451);
+  transition: 0.3s ease;
+}
+.project-container .visit {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.project-container #github {
+  font-size: 1.2rem;
+  color: #14986c;
+}
+.project-container #visiter {
+  color: #f1f1f1;
+  margin: 10px;
+  font-size: 1.1rem;
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+}
+.project-container img {
+  height: 80%;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.project-container img:hover {
+  opacity: 0.7;
+}
+.project-container li {
+  font-family: "Fira Sans", sans-serif;
+  color: #f1f1f1;
+  font-size: 0.9rem;
+  list-style: none;
+}
+.project-container h5 {
+  font-family: "Poppins", sans-serif;
+  color: #11c784;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+.project-container h4 {
+  font-family: "Inter", sans-serif;
+  color: #f1f1f1;
+  font-size: 1.3rem;
+  padding: 6px 6px 0 0;
+}
+.project-container p {
+  font-family: "Inter", sans-serif;
+  color: #f1f1f1;
+}
+
+.projects-container {
+  width: 70%;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.portfolio h1 {
+  color: #f1f1f1;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.button-component {
+  padding: 10px;
+  background: #11c784;
+  color: #f1f1f1;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  border: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
 }/*# sourceMappingURL=index.css.map */
