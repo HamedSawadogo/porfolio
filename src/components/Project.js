@@ -1,5 +1,4 @@
 import React from "react";
-
 const Project = ({ project }) => {
   const handleClick = () => {
     if (project.url) {

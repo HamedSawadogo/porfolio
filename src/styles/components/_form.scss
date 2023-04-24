@@ -1,24 +1,76 @@
-form {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
+.form-container {
+   h3 {
+      transition: .3s ease;
+      text-align: center;
+      font-family: $font2;
+      color: $color3;
+      margin: 50px auto;
+      width: 160px;
+      border-bottom: 3px solid #1cc;
+      display: block;
+      padding: 10px;
+   }
+}
 
+form {
+   display: grid;
+   margin: 20px auto;
+   justify-content: center;
+   transition: .3s ease;
+
+   label {
+      font-family: $font4;
+      color: #f1f1f1b2;
+      font-size: 1rem;
+
+   }
 
    input {
-      width: 400px;
-      padding: 5px;
-      margin: 3px 0;
-      border: transparent;
+      transition: .3s ease;
+      width: 500px;
+      padding: 10px;
+      margin: 5px 0;
+      border: 4px;
+      outline: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: $font4;
 
       &::placeholder {
+         font-size: 1rem;
          font-family: $font4;
       }
    }
 
-   textarea {}
+   textarea {
+      width: 500px;
+      outline: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: $font4;
+
+      &::placeholder {
+         font-size: 1rem;
+         font-family: $font4;
+      }
+   }
 
    button {
-      display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 5px 0;
+      color: #f1f1f1;
+      background: #1cc;
+      border-radius: 5px;
+      border: transparent;
+      font-size: 1.1rem;
+      transition: .3s ease;
+
+
+      &:hover {
+         cursor: pointer;
+         transform: scale(1.077);
+      }
+
    }
 }

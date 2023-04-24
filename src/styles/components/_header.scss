@@ -20,12 +20,32 @@
             color: $color1;
             margin: 0 7px;
          }
+
+         @media screen and (max-width:700px) {
+            font-size: 1.1rem;
+         }
       }
 
       h1 {
          font-size: 5rem;
          color: $color3;
          font-family: $font4;
+
+         @media screen and (max-width:700px) {
+            font-size: 3rem;
+         }
+
+         @media screen and (max-width:800px) {
+            font-size: 4rem;
+         }
+
+         @media screen and (max-width:700px) {
+            font-size: 2rem;
+         }
+
+         @media screen and (max-width:330px) {
+            font-size: 1.7rem;
+         }
       }
 
       span {

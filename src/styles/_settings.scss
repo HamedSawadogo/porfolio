@@ -16,7 +16,17 @@ $header: rgb(16, 23, 30);
    box-sizing: border-box;
 }
 
+p,
+h2,
+h1 {
+   &::selection {
+      background: #1cc;
+   }
+}
+
 body {
    scroll-behavior: smooth;
    background: $back;
+
+
 }

@@ -3,14 +3,46 @@
    position: fixed;
    width: 100%;
    z-index: 10000;
+   position: relative;
+   height: 55px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   .fa-bar {
+      position: absolute;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      right: 30px;
+      display: none;
+
+      i {
+         font-size: 1.8rem;
+         color: #f1f1f1;
+         cursor: pointer;
+      }
+
+      @media screen and (max-width:470px) {
+         display: block;
+      }
+   }
+
+   .nav-active {
+      display: block;
+   }
 
    .items-container {
       width: 70%;
       display: flex;
-      height: 55px;
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
+
+
+      @media screen and (max-width:470px) {
+         display: none;
+      }
    }
 
    a {
@@ -19,5 +51,10 @@
       text-decoration: none;
       font-size: 1.1rem;
       font-family: $font4;
+
+      @media screen and (max-width:540px) {
+         font-size: .9rem;
+      }
+
    }
 }

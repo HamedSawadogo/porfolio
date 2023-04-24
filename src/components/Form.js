@@ -31,9 +31,10 @@ const From = () => {
     }
   };
   return (
-    <>
-      <h3>Me contacter</h3>
+    <div className="form-container">
+      <h3 id="contact">Me contacter</h3>
       <form onSubmit={(e) => handleSubmit(e)} action="" className="formulaire">
+        <label htmlFor="username">votre nom</label>
         <input
           type="text"
           name="username"
@@ -43,6 +44,7 @@ const From = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
+        <label htmlFor="email">votre adresse mail</label>
         <input
           type="email"
           name="email"
@@ -53,8 +55,9 @@ const From = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
+        <label for="message">votre message</label>
         <textarea
-          name=""
+          name="message"
           id=""
           placeholder="votre message"
           $
@@ -65,7 +68,7 @@ const From = () => {
         ></textarea>
         <button type="submit">Me Contacter</button>
       </form>
-    </>
+    </div>
   );
 };
 
