@@ -1,13 +1,13 @@
 .navigation {
-   background: $color1;
-   position: fixed;
    width: 100%;
    z-index: 10000;
-   position: relative;
    height: 55px;
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 1px;
+   background: $color1;
+   position: fixed;
 
    .fa-bar {
       position: absolute;
@@ -39,18 +39,33 @@
       align-items: center;
       margin: 0 auto;
 
-
       @media screen and (max-width:470px) {
          display: none;
       }
+   }
+
+   .nav-active {
+      font-weight: bold;
+      font-size: 1rem;
+      transform: scale(1.066);
+      border-bottom: 3px solid $back;
+
    }
 
    a {
       margin: 0 10px;
       color: $color3;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: .9rem;
       font-family: $font4;
+      transition: .3s ease;
+      text-transform: uppercase;
+
+      &:hover {
+         font-weight: bold;
+         font-size: 1.2rem;
+         transform: scale(1.066);
+      }
 
       @media screen and (max-width:540px) {
          font-size: .9rem;

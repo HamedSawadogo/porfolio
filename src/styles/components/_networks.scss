@@ -1,0 +1,33 @@
+.networks-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   #linkdin {
+      color: rgb(35, 29, 104);
+   }
+
+   #whatapps {
+      color: rgb(40, 254, 40);
+   }
+
+   #github {
+      color: #333;
+   }
+
+   #twitter {
+      color: rgb(44, 148, 240);
+   }
+
+   i {
+      margin: 5px;
+      padding: 8px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: .3s ease;
+
+      &:hover {
+         transform: translateY(-5px);
+      }
+   }
+}

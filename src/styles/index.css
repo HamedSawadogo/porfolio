@@ -22,15 +22,15 @@ body {
 }
 
 .navigation {
-  background: #1cc;
-  position: fixed;
   width: 100%;
   z-index: 10000;
-  position: relative;
   height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1px;
+  background: #1cc;
+  position: fixed;
 }
 .navigation .fa-bar {
   position: absolute;
@@ -65,12 +65,25 @@ body {
     display: none;
   }
 }
+.navigation .nav-active {
+  font-weight: bold;
+  font-size: 1rem;
+  transform: scale(1.066);
+  border-bottom: 3px solid #0a192f;
+}
 .navigation a {
   margin: 0 10px;
   color: rgb(245, 247, 249);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+.navigation a:hover {
+  font-weight: bold;
+  font-size: 1.2rem;
+  transform: scale(1.066);
 }
 @media screen and (max-width: 540px) {
   .navigation a {
@@ -102,7 +115,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   .profil-container .profil h2 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 }
 .profil-container .profil h1 {
@@ -207,6 +220,9 @@ body {
   opacity: 1;
 }
 
+.form-container {
+  padding: 10px;
+}
 .form-container h3 {
   transition: 0.3s ease;
   text-align: center;
@@ -218,21 +234,21 @@ body {
   display: block;
   padding: 10px;
 }
-
-form {
+.form-container form {
   display: grid;
-  margin: 20px auto;
+  margin: 10px auto;
   justify-content: center;
   transition: 0.3s ease;
+  position: relative;
 }
-form label {
+.form-container form label {
   font-family: "Poppins", sans-serif;
   color: rgba(241, 241, 241, 0.6980392157);
   font-size: 1rem;
 }
-form input {
+.form-container form input {
   transition: 0.3s ease;
-  width: 500px;
+  width: 400px;
   padding: 10px;
   margin: 5px 0;
   border: 4px;
@@ -241,30 +257,30 @@ form input {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form input::-moz-placeholder {
+.form-container form input::-moz-placeholder {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form input::placeholder {
+.form-container form input::placeholder {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form textarea {
-  width: 500px;
+.form-container form textarea {
+  width: 100%;
   outline: none;
   border-radius: 10px;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form textarea::-moz-placeholder {
+.form-container form textarea::-moz-placeholder {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form textarea::placeholder {
+.form-container form textarea::placeholder {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
-form button {
+.form-container form button {
   width: 200px;
   padding: 10px;
   margin: 5px 0;
@@ -275,7 +291,35 @@ form button {
   font-size: 1.1rem;
   transition: 0.3s ease;
 }
-form button:hover {
+.form-container form button:hover {
   cursor: pointer;
   transform: scale(1.077);
+}
+
+.networks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.networks-container #linkdin {
+  color: rgb(35, 29, 104);
+}
+.networks-container #whatapps {
+  color: rgb(40, 254, 40);
+}
+.networks-container #github {
+  color: #333;
+}
+.networks-container #twitter {
+  color: rgb(44, 148, 240);
+}
+.networks-container i {
+  margin: 5px;
+  padding: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.networks-container i:hover {
+  transform: translateY(-5px);
 }/*# sourceMappingURL=index.css.map */

@@ -15,10 +15,18 @@ const Navbar = () => {
   return (
     <nav className="navigation">
       <ul className="items-container" id="items">
-        <NavLink to={"/"}>Accueil</NavLink>
-        <NavLink to={"/"}>A propos</NavLink>
-        <NavLink to={"/"}>Portfolio</NavLink>
-        <NavLink to={"/contact"}>Contact</NavLink>
+        <NavLink
+          to={"/"}
+          className={(nav) => (nav.isActive ? "nav-active" : "nav")}
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to={"/contact"}
+          className={(nav) => (nav.isActive ? "nav-active" : "nav")}
+        >
+          Contact
+        </NavLink>
       </ul>
       <div className="fa-bar" onClick={() => handleToogle()}>
         <i class="fa-solid fa-bars"></i>

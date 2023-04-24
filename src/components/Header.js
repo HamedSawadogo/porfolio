@@ -1,4 +1,5 @@
 import React from "react";
+import Networks from "./Networks";
 const Header = () => {
   return (
     <div className="profil-container">
@@ -14,9 +15,8 @@ const Header = () => {
             de la Tech
           </p>
         </div>
-        {/* <img src={profil} alt="photo de profil" /> */}
-        {/* <h2>Développeur</h2> */}
         <button>Télecharger mon CV</button>
+        <Networks />
       </div>
     </div>
   );

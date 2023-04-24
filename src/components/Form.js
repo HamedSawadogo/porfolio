@@ -60,7 +60,6 @@ const From = () => {
           name="message"
           id=""
           placeholder="votre message"
-          $
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           cols="30"
