@@ -1,12 +1,7 @@
 import React from "react";
 const Project = ({ data }) => {
-  const handleClick = () => {
-    if (data.url) {
-      window.location.href = data.url;
-    }
-  };
   return (
-    <div className="project-container" onClick={() => handleClick()}>
+    <div className="project-container">
       <img src={data.img} alt={`image du projet-${data.title}`} />
       <div className="content">
         <h4>{data.title}</h4>

@@ -8,6 +8,12 @@
    padding: 1px;
    background: $color1;
    position: fixed;
+   transition: .3s ease;
+
+   #toogle {
+      font-size: 2.2rem;
+      cursor: pointer;
+   }
 
    .fa-bar {
       position: absolute;
@@ -16,6 +22,7 @@
       align-items: center;
       right: 30px;
       display: none;
+      transition: .3s ease;
 
       i {
          font-size: 1.8rem;

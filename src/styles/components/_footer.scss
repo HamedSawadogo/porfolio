@@ -1,1 +1,84 @@
-.footer {}
+.footer {
+   background: #02060b;
+   height: 70vh;
+   font-family: $font2;
+   display: grid;
+   grid-template-rows: 80% 20%;
+   width: 100%;
+   clip-path: polygon(0 0, 100% 23%, 100% 100%, 0% 100%);
+
+
+   .rights {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #f1f1f1a0;
+      color: #f1f1f1;
+
+      p {
+         font-size: 1rem;
+         opacity: .3;
+      }
+   }
+
+   .contact-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+
+      @media screen and (max-width:650px) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      p {
+         font-size: 1.2rem;
+         color: #f1f1f1;
+         font-family: $font3;
+
+         @media screen and (max-width:750px) {
+            font-size: 1rem;
+         }
+      }
+
+      span {
+         color: #f1f1f1;
+         opacity: .4;
+         font-size: .8rem;
+         margin: 5px 0;
+
+      }
+
+      .icon {
+         margin: 0 10px;
+      }
+
+      .contact-phone {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+      }
+
+      .contact-email {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 10px;
+         padding: 10px;
+      }
+
+      .contact-github {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+   }
+
+}

@@ -1,12 +1,12 @@
 .project-container {
-   padding: 10px;
    width: 100%;
-   margin: 30px auto;
    border: 1px solid #f1f1f13d;
    transition: .3s ease;
    min-width: 300px;
    margin: 10px auto;
+   padding: 10px;
    border-radius: 8px;
+   height: 700px;
 
    .visit {
       display: flex;
@@ -29,10 +29,11 @@
    }
 
    img {
-      height: 80%;
+      height: 70%;
       width: 100%;
       cursor: pointer;
       transition: .3s ease;
+      object-fit: cover;
 
       &:hover {
          opacity: .7;

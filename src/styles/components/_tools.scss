@@ -1,0 +1,27 @@
+.tools-container {
+   h3 {
+      text-align: center;
+      font-family: $font4;
+      color: $color3;
+      margin: 70px auto;
+      border-bottom: 2px solid $color1;
+      width: 180px;
+   }
+
+   .tools {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s ease;
+      flex-wrap: wrap;
+
+      img {
+         margin: 0 6px;
+         width: 50px;
+         height: 50px;
+         transition: .3s ease;
+         cursor: pointer;
+      }
+   }
+}

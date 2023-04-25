@@ -6,7 +6,7 @@ const Header = () => {
       <div className="profil">
         <span>Salut! Je suis</span>
         <h1>Sawadogo Hamed</h1>
-        <h2>Créateur et developpeur de Solutions</h2>
+        <h2>Ingénieur et developpeur de Javascript</h2>
         <div className="about-profil">
           <p className="me">
             Je suis Développeur javacript spécialisé dans le developement
