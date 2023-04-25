@@ -2,7 +2,7 @@ import React from "react";
 const Project = ({ data }) => {
   return (
     <div className="project-container">
-      <img src={data.img} alt={`image du projet-${data.title}`} />
+      <img src={data.img} alt={`image du projet-${""}`} />
       <div className="content">
         <h4>{data.title}</h4>
         <p>{data.description}</p>
@@ -11,8 +11,7 @@ const Project = ({ data }) => {
           <li key={id}>✅{techno}</li>
         ))}
         <div className="visit">
-          <i class="fa-brands fa-github" id="github"></i>
-
+          <i className="fa-brands fa-github" id="github"></i>
           <a href={data.url && data.url} target="_blank" id="visiter">
             {data.url ? " visiter ➡️" : "Hors ligne"}
           </a>

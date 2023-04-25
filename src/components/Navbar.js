@@ -64,7 +64,7 @@ const Navbar = () => {
         </span>
       </ul>
       <div className="fa-bar" onClick={() => handleToogle()}>
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
       </div>
     </nav>
   );

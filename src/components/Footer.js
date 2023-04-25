@@ -4,9 +4,14 @@ import SendIcon from "@mui/icons-material/Send";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { useDispatch } from "react-redux";
+import { toogleTheme } from "../slices/Theme.slice";
 
 const Footer = () => {
-  const styles = {};
+  const dispatch = useDispatch();
+  const HandletoogleTheme = () => {
+    dispatch(toogleTheme());
+  };
   return (
     <footer className="footer">
       {/* contacts */}
@@ -46,8 +51,14 @@ const Footer = () => {
           <p>©2022-23 DevelopThis. All rights reserved.</p>
         </div>
         <div className="dark-mode">
-          <LightModeIcon style={{ margin: "0 10px", cursor: "pointer" }} />
-          <DarkModeIcon style={{ margin: "0 10px", cursor: "pointer" }} />
+          <LightModeIcon
+            onClick={() => HandletoogleTheme()}
+            style={{ margin: "0 10px", cursor: "pointer" }}
+          />
+          <DarkModeIcon
+            onClick={() => HandletoogleTheme()}
+            style={{ margin: "0 10px", cursor: "pointer" }}
+          />
         </div>
       </div>
     </footer>

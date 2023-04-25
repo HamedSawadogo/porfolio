@@ -9,12 +9,6 @@
       text-align: center;
 
       h2 {
-         font-family: $font4;
-         color: $color3;
-         text-align: center;
-         opacity: .8;
-         font-size: 1.2rem;
-
          &::after {
             content: "javascript Réact Js,Rédux,typeScript";
             color: $color1;
@@ -27,10 +21,6 @@
       }
 
       h1 {
-         font-size: 5rem;
-         color: $color3;
-         font-family: $font4;
-
          @media screen and (max-width:700px) {
             font-size: 3rem;
          }
@@ -47,42 +37,6 @@
             font-size: 1.7rem;
          }
       }
-
-      span {
-         color: $color3;
-         font-size: 1rem;
-         font-family: $font4;
-         margin: 0 5px;
-      }
-
-      .about-profil {
-         .me {
-            font-family: $font4;
-            color: $color3;
-            text-align: center;
-            opacity: .7;
-            width: 70%;
-            margin: 0 auto;
-         }
-      }
-
-      button {
-         display: block;
-         padding: 10px;
-         margin: 16px auto;
-         cursor: pointer;
-         color: $color3;
-         font-family: $font4;
-         background: $color1;
-         border: none;
-         border-radius: 15px;
-         transition: .3s ease;
-
-         &:hover {
-            transform: scale(1.088);
-         }
-      }
-
    }
 
 

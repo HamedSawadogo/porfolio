@@ -18,7 +18,6 @@ h1::selection {
 
 body {
   scroll-behavior: smooth;
-  background: #0a192f;
 }
 
 .navigation {
@@ -72,10 +71,7 @@ body {
   }
 }
 .navigation .nav-active {
-  font-weight: bold;
-  font-size: 1rem;
-  transform: scale(1.066);
-  border-bottom: 1px solid #0a192f;
+  color: #0a192f;
 }
 .navigation a {
   margin: 0 10px;
@@ -107,13 +103,6 @@ body {
 .profil-container .profil {
   text-align: center;
 }
-.profil-container .profil h2 {
-  font-family: "Poppins", sans-serif;
-  color: rgb(245, 247, 249);
-  text-align: center;
-  opacity: 0.8;
-  font-size: 1.2rem;
-}
 .profil-container .profil h2::after {
   content: "javascript Réact Js,Rédux,typeScript";
   color: #11c784;
@@ -123,11 +112,6 @@ body {
   .profil-container .profil h2 {
     font-size: 0.9rem;
   }
-}
-.profil-container .profil h1 {
-  font-size: 5rem;
-  color: rgb(245, 247, 249);
-  font-family: "Poppins", sans-serif;
 }
 @media screen and (max-width: 700px) {
   .profil-container .profil h1 {
@@ -149,51 +133,13 @@ body {
     font-size: 1.7rem;
   }
 }
-.profil-container .profil span {
-  color: rgb(245, 247, 249);
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-  margin: 0 5px;
-}
-.profil-container .profil .about-profil .me {
-  font-family: "Poppins", sans-serif;
-  color: rgb(245, 247, 249);
-  text-align: center;
-  opacity: 0.7;
-  width: 70%;
-  margin: 0 auto;
-}
-.profil-container .profil button {
-  display: block;
-  padding: 10px;
-  margin: 16px auto;
-  cursor: pointer;
-  color: rgb(245, 247, 249);
-  font-family: "Poppins", sans-serif;
-  background: #11c784;
-  border: none;
-  border-radius: 15px;
-  transition: 0.3s ease;
-}
-.profil-container .profil button:hover {
-  transform: scale(1.088);
-}
-
-.about-container-block h3 {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: rgb(245, 247, 249);
-  margin: 10px auto;
-  border-bottom: 2px solid #11c784;
-  width: 160px;
-}
 
 .about-container .about {
   width: 80%;
   display: grid;
   justify-content: center;
   grid-template-columns: 65% 35%;
-  margin: 30px auto;
+  margin: 0px auto;
   gap: 20px;
 }
 @media screen and (max-width: 750px) {
@@ -203,13 +149,6 @@ body {
   .about-container .about .about-right img {
     height: 50%;
   }
-}
-.about-container .about .about-left {
-  font-family: "Poppins", sans-serif;
-  color: rgb(245, 247, 249);
-  text-align: center;
-  opacity: 0.7;
-  text-align: left;
 }
 .about-container .about .about-right img {
   -o-object-fit: cover;
@@ -334,18 +273,21 @@ body {
   transition: 0.3s ease;
   min-width: 300px;
   margin: 10px auto;
-  padding: 10px;
   border-radius: 8px;
-  height: 700px;
+  height: auto;
+}
+.project-container .content {
+  padding: 10px;
 }
 .project-container .visit {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  padding: 5px;
 }
 .project-container #github {
   font-size: 1.5rem;
-  color: #12da33;
+  color: #babfc6;
   padding: 10px;
 }
 .project-container #visiter {
@@ -417,7 +359,7 @@ body {
 }
 
 .footer {
-  background: #02060b;
+  background: #041023;
   height: 70vh;
   font-family: "Fira Sans", sans-serif;
   display: grid;

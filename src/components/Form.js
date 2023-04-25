@@ -55,7 +55,7 @@ const From = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
-        <label for="message">votre message</label>
+        <label htmlFor="message">votre message</label>
         <textarea
           name="message"
           id=""

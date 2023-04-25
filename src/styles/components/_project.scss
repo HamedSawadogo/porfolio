@@ -4,20 +4,25 @@
    transition: .3s ease;
    min-width: 300px;
    margin: 10px auto;
-   padding: 10px;
    border-radius: 8px;
-   height: 700px;
+   height: auto;
+
+   .content {
+      padding: 10px;
+   }
+
 
    .visit {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
+      padding: 5px;
 
    }
 
    #github {
       font-size: 1.5rem;
-      color: #12da33;
+      color: #babfc6;
       padding: 10px;
    }
 
