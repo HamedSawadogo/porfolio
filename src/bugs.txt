@@ -1,0 +1,6 @@
+A regler
+1-order chronologique des elemenst HTML exemple h1 h2 h3
+2-gestion de ul contient uniquement que des li au niveau de 
+ul#items.items-container  ,a.nav-active,a.nav
+3-permettre l'exploration des liens, a doit contenir un href valide
+4-
