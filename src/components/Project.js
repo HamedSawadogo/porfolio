@@ -12,9 +12,13 @@ const Project = ({ data }) => {
         ))}
         <div className="visit">
           <i className="fa-brands fa-github" id="github"></i>
-          <a href={data.url && data.url} target="_blank" id="visiter">
-            {data.url ? " visiter ➡️" : "Hors ligne"}
-          </a>
+          {data.url ? (
+            <a href={data.url} target="_blank" id="visiter">
+              visiter ➡️
+            </a>
+          ) : (
+            <small>hors Ligne</small>
+          )}
         </div>
       </div>
     </div>

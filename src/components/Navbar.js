@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toogleTheme } from "../slices/Theme.slice";
@@ -8,21 +8,12 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 const Navbar = () => {
   const dispatch = useDispatch();
   const selector = useSelector((state) => state.theme.theme);
-
-  const [toogle, setToogle] = useState(false);
   const handleToogle = () => {
-    setToogle(!toogle);
     let items = document.getElementById("items");
-    if (toogle) {
-      items.classList.toggle("nav-active");
-    } else {
-      items.classList.remove("nav-active");
-    }
+    items.classList.toggle("nav-active");
   };
   const handleToogleTheme = () => {
-    console.log("roo");
     dispatch(toogleTheme());
-    console.log(selector);
   };
   useEffect(() => {
     window.addEventListener("scroll", () => {
