@@ -1,11 +1,22 @@
-import img1 from "./images/MealsApp.png";
-import img2 from "./images/items.png";
-import img3 from "./images/plantApp.png";
 import img5 from "./images/cine.png";
 import im6 from "./images/HeaderResto.jpg";
 import im7 from "./images/Gaming.jpg";
+import im4 from "./images/plantApp.png";
+import im3 from "./images/Crypto-App.jpg";
 
 export const projectsData = [
+  {
+    img: im3,
+    title: "Actualités App",
+    description: "Application d'actualités",
+    technos: ["react js", "Context", "axios", "syled-components"],
+  },
+  {
+    img: im4,
+    title: "Actualités App",
+    description: "Application d'actualités",
+    technos: ["react js", "Context", "axios", "syled-components"],
+  },
   {
     img: img5,
     title: "Actualités App",
