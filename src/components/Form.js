@@ -1,6 +1,26 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { colors } from "../utils/styles";
 
+const ContactWrapper = styled.h3`
+  transition: 0.3s ease;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
+  margin: 50px auto;
+  width: 160px;
+  border-bottom: 3px solid ${colors.color1};
+  display: block;
+  padding: 10px;
+`;
+
+const LabelWrapper = styled.label`
+  font-family: "Inter", sans-serif;
+  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
+  font-size: 0.8rem;
+`;
 const From = () => {
   const [error, setError] = useState(false);
   const [email, setEmail] = useState("");
@@ -30,11 +50,14 @@ const From = () => {
       setError(true);
     }
   };
+  const theme = useSelector((state) => state.theme.theme);
   return (
     <div className="form-container">
-      <h3 id="contact">Me contacter</h3>
+      <ContactWrapper theme={theme}>Me contacter</ContactWrapper>
       <form onSubmit={(e) => handleSubmit(e)} action="" className="formulaire">
-        <label htmlFor="username">votre nom</label>
+        <LabelWrapper htmlFor="username" theme={theme}>
+          votre nom
+        </LabelWrapper>
         <input
           type="text"
           name="username"
@@ -44,7 +67,9 @@ const From = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-        <label htmlFor="email">votre adresse mail</label>
+        <LabelWrapper theme={theme} htmlFor="email">
+          votre adresse mail
+        </LabelWrapper>
         <input
           type="email"
           name="email"
@@ -55,7 +80,10 @@ const From = () => {
           onChange={(e) => setEmail(e.target.value)}
           value={email}
         />
-        <label htmlFor="message">votre message</label>
+        <LabelWrapper theme={theme} htmlFor="message">
+          votre message
+        </LabelWrapper>
+
         <textarea
           name="message"
           id=""

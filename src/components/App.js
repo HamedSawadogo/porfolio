@@ -7,14 +7,14 @@ import Footer from "./Footer";
 import Competences from "./Competences";
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Header />
       <About />
       <Competences />
       <Portfolio />
       <Footer />
-    </div>
+    </>
   );
 };
 

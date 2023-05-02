@@ -43,10 +43,13 @@ const Button = styled.button`
   border: none;
   border-radius: 15px;
   transition: 0.3s ease;
+  text-decoloration: none;
   &:hover {
     transform: scale(1.088);
   }
 `;
+
+const download = () => {};
 const Header = () => {
   const theme = useSelector((state) => state.theme.theme);
   return (
@@ -65,7 +68,11 @@ const Header = () => {
             de la Tech
           </MeWrapper>
         </div>
-        <Button theme={theme}>Télecharger mon CV</Button>
+        <Button onClick={() => download()} theme={theme}>
+          <a href="cv.pdf" download>
+            Télecharger mon CV
+          </a>
+        </Button>
         <Networks />
       </div>
     </div>

@@ -1,9 +1,24 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
+import { colors } from "../utils/styles";
 
+const H3Wrapper = styled.h3`
+  font-family: "Poppins", sans-serif;
+  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
+  text-align: center;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  margin: 70px auto;
+  border-bottom: 2px solid ${colors.color1};
+  width: auto;
+  width: 200px;
+`;
 const Tools = () => {
+  const theme = useSelector((state) => state.theme.theme);
   return (
     <div className="tools-container">
-      <h3>Mes Compétences </h3>
+      <H3Wrapper theme={theme}>Mes Compétences</H3Wrapper>
       <div className="tools">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />

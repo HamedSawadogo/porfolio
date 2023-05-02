@@ -1,74 +1,74 @@
 .project-container {
-   width: 100%;
-   border: 1px solid #f1f1f13d;
-   transition: .3s ease;
-   min-width: 300px;
-   margin: 10px auto;
-   border-radius: 8px;
-   height: auto;
+   // width: 100%;
+   // border: 1px solid #f1f1f13d;
+   // transition: .3s ease;
+   // min-width: 300px;
+   // margin: 10px auto;
+   // border-radius: 8px;
+   // height: auto;
 
-   .content {
-      padding: 10px;
-   }
+   // .content {
+   //    padding: 10px;
+   // }
 
 
-   .visit {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      padding: 5px;
+   // .visit {
+   //    display: flex;
+   //    align-items: flex-end;
+   //    justify-content: space-between;
+   //    padding: 5px;
 
-   }
+   // }
 
-   #github {
-      font-size: 1.5rem;
-      color: #babfc6;
-      padding: 10px;
-   }
+   // #github {
+   //    font-size: 1.5rem;
+   //    color: #babfc6;
+   //    padding: 10px;
+   // }
 
-   #visiter {
-      color: #f1f1f1;
-      font-size: 1.1rem;
-      font-family: $font2;
-      text-decoration: none;
-   }
+   // #visiter {
+   //    color: #f1f1f1;
+   //    font-size: 1.1rem;
+   //    font-family: $font2;
+   //    text-decoration: none;
+   // }
 
-   img {
-      height: 70%;
-      width: 100%;
-      cursor: pointer;
-      transition: .3s ease;
-      object-fit: cover;
+   // img {
+   //    height: 70%;
+   //    width: 100%;
+   //    cursor: pointer;
+   //    transition: .3s ease;
+   //    object-fit: cover;
 
-      &:hover {
-         opacity: .7;
+   //    &:hover {
+   //       opacity: .7;
 
-      }
-   }
+   //    }
+   // }
 
-   li {
-      font-family: $font2;
-      color: #f1f1f1;
-      font-size: .9rem;
-      list-style: none;
-   }
+   // li {
+   //    font-family: $font2;
+   //    color: #f1f1f1;
+   //    font-size: .9rem;
+   //    list-style: none;
+   // }
 
-   h5 {
-      font-family: $font4;
-      color: #11c784;
-      font-size: 1.3rem;
-      opacity: .8;
-   }
+   // h5 {
+   //    font-family: $font4;
+   //    color: #11c784;
+   //    font-size: 1.3rem;
+   //    opacity: .8;
+   // }
 
-   h4 {
-      font-family: $font3;
-      color: #f1f1f1;
-      font-size: 1.3rem;
-      padding: 6px 6px 0 0;
-   }
+   // h4 {
+   //    font-family: $font3;
+   //    color: #f1f1f1;
+   //    font-size: 1.3rem;
+   //    padding: 6px 6px 0 0;
+   // }
 
-   p {
-      font-family: $font3;
-      color: #f1f1f1;
-   }
+   // p {
+   //    font-family: $font3;
+   //    color: #f1f1f1;
+   // }
 }

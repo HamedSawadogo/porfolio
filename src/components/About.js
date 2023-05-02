@@ -24,7 +24,6 @@ const About = () => {
   return (
     <div className="about-container-block">
       <TitleEmlement theme={theme}>A propos de Moi</TitleEmlement>
-
       <div className="about-container">
         <div className="about">
           <div className="about-left">
