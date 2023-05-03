@@ -4,12 +4,11 @@ import Project from "./Project";
 import styled from "styled-components";
 
 const ProjectsWrapper = styled.div`
-  width: 70%;
-  display: flex;
+  width: 60%;
+  display: grid;
   margin: 20px auto;
+  grid-template-columns: 100%;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 `;
 const Projects = () => {
   return (

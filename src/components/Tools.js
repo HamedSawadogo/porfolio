@@ -12,13 +12,13 @@ const H3Wrapper = styled.h3`
   margin: 70px auto;
   border-bottom: 2px solid ${colors.color1};
   width: auto;
-  width: 200px;
+  width: 100px;
 `;
 const Tools = () => {
   const theme = useSelector((state) => state.theme.theme);
   return (
     <div className="tools-container">
-      <H3Wrapper theme={theme}>Mes Compétences</H3Wrapper>
+      <H3Wrapper theme={theme}>Mes Outils</H3Wrapper>
       <div className="tools">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />

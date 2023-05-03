@@ -6,11 +6,11 @@ const ProjectWrapper = styled.div`
   width: 100%;
   border: 1px solid ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f13d")};
   transition: 0.3s ease;
-  min-width: 300px;
-  margin: 10px auto;
+  margin: 15px auto;
   border-radius: 8px;
   padding: 1px;
   overflow: hiden;
+  height: 690px;
 `;
 
 const TechnosWrapper = styled.h5`
@@ -37,10 +37,11 @@ const TitleWrapper = styled.h4`
 `;
 
 const ImageWrapper = styled.img`
-  height: 76%;
+  height: 68%;
   width: 100%;
   cursor: pointer;
   transition: 0.3s ease;
+  object-fit: cover;
 
   &:hover {
     opacity: 0.7;
