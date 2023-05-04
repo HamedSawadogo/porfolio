@@ -1,3 +1,11 @@
-email service :service_fnymrcq
-template:template_jl7imfe
-public_key:yKohkmG1kXkW3DMpU
+Plugins
+Plug-ins à installer pour coder plus vite :
+
+Simple React snippets
+Reactjs code snippets
+Mithril Emmet
+
+
+Dans settings.json, rajouter :
+
+"emmet.includeLanguages": { "javascript": "javascriptreact" }, "emmet.triggerExpansionOnTab": true
