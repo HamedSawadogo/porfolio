@@ -10,9 +10,7 @@ const H3Wrapper = styled.h3`
   opacity: 0.8;
   font-size: 1.2rem;
   margin: 70px auto;
-  border-bottom: 2px solid ${colors.color1};
-  width: auto;
-  width: 100px;
+  text-transform: uppercase;
 `;
 const Tools = () => {
   const theme = useSelector((state) => state.theme.theme);

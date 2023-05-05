@@ -4,9 +4,26 @@ import { NavLink } from "react-router-dom";
 import { toogleTheme } from "../slices/Theme.slice";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import styled from "styled-components";
+
+const NavWrapper = styled.nav`
+  width: 100%;
+  z-index: 10000;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  background: ${({ theme }) => (theme === "light" ? "white" : "#11c784")};
+  position: fixed;
+  border-bottom: 1px solid
+    ${({ theme }) => (theme === "light" ? "#11c784" : "transparant")};
+  transition: 0.3s ease;
+`;
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
   const selector = useSelector((state) => state.theme.theme);
   const handleToogle = () => {
     let items = document.getElementById("items");
@@ -25,8 +42,9 @@ const Navbar = () => {
       }
     });
   }, []);
+
   return (
-    <nav className="navigation" id="navbar">
+    <NavWrapper theme={theme} className="navigation" id="navbar">
       <ul className="items-container" id="items">
         <NavLink
           to={"/"}
@@ -57,7 +75,7 @@ const Navbar = () => {
       <div className="fa-bar" onClick={() => handleToogle()}>
         <i className="fa-solid fa-bars"></i>
       </div>
-    </nav>
+    </NavWrapper>
   );
 };
 

@@ -4,11 +4,8 @@ import Project from "./Project";
 import styled from "styled-components";
 
 const ProjectsWrapper = styled.div`
-  width: 60%;
-  display: grid;
-  margin: 20px auto;
-  grid-template-columns: 100%;
-  justify-content: center;
+  width: 85%;
+  margin: 0 auto;
 `;
 const Projects = () => {
   return (

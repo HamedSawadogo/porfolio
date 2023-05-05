@@ -15,7 +15,6 @@ const ContactWrapper = styled.h3`
   display: block;
   padding: 10px;
 `;
-
 const LabelWrapper = styled.label`
   font-family: "Inter", sans-serif;
   color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
@@ -55,6 +54,7 @@ const From = () => {
     <div className="form-container">
       <ContactWrapper theme={theme}>Me contacter</ContactWrapper>
       <form onSubmit={(e) => handleSubmit(e)} action="" className="formulaire">
+        {/* firstname */}
         <LabelWrapper htmlFor="username" theme={theme}>
           votre nom
         </LabelWrapper>
@@ -67,6 +67,7 @@ const From = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
         />
+        {/* email */}
         <LabelWrapper theme={theme} htmlFor="email">
           votre adresse mail
         </LabelWrapper>

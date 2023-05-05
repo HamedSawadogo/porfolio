@@ -7,9 +7,9 @@ import { colors, fonts } from "../utils/styles";
 const TitleEmlement = styled.h3`
   color: ${({ theme }) => (theme === "light" ? " #0a192f" : "#f1f1f1")};
   text-align: center;
-  margin: 10px auto;
-  border-bottom: 2px solid ${colors.color1};
-  width: 160px;
+  margin: 25px auto;
+  text-transform: uppercase;
+  opacity: 0.8;
   font-family: ${fonts.font3};
 `;
 
@@ -18,6 +18,7 @@ const TextWrapper = styled.p`
   color: ${({ theme }) => (theme === "light" ? "#0a192f" : "#f1f1f1")};
   text-align: center;
   text-align: left;
+  font-size: 1.2rem;
 `;
 const About = () => {
   const theme = useSelector((state) => state.theme.theme);

@@ -1,21 +1,26 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { colors } from "../utils/styles";
 
+const front = ["Javascript", "react", "Redux", "Html| CSS", "Sass"];
+const back = ["Node Js", "Php", "Java", "C++", "Oracle", "Mysql"];
+
+const Container = styled.div`
+  width: 80%;
+  margin: 0 auto;
+`;
 const CompetencesWrapper = styled.ul`
   display: grid;
-  grid-template-columns: 25% 25% 25%;
-  height: 200px;
-  justify-content: center;
-  margin: 50px auto;
+  grid-template-columns: 35% 65%;
+  justity-content: center;
+  height: 160px;
+  margin: 20px 0;
 `;
 const Item = styled.li`
-  font-seize: 1rem;
+  font-size: 1.1rem;
   font-family: "Poppins", sans-serif;
-  color: #f1f1f1;
-  display: flex;
-  justify-content: center;
+  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
+  margin: 1px 20px;
 `;
 
 const CompetenceWrapper = styled.h2`
@@ -26,35 +31,70 @@ const CompetenceWrapper = styled.h2`
   width: 200px;
   opacity: 0.8;
   font-size: 1.2rem;
-  margin: 20px auto;
-  border-bottom: 3px solid ${colors.color1};
+  padding-top: 50px;
+  margin: 5px auto;
+  text-transform: uppercase;
+`;
+
+const Techno = styled.div`
+  display: flex;
+  align-items: start;
+  justify-content: right;
+`;
+const Technos = styled.div`
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  border-left: 1px solid #333;
+  padding: 5px 40px;
+`;
+const Button = styled.button`
+  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
+  background: #11c784;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  width: 120px;
+  padding: 8px;
+  font-family: "Inter", sans-serif;
 `;
 const Competences = () => {
-  const competences = [
-    "Javascript",
-    "react",
-    "Redux",
-    "Html| CSS",
-    "Node Js",
-    "Java",
-    "Php",
-    "Oracle",
-    "SQL",
-    "C++",
-  ];
   const theme = useSelector((state) => state.theme.theme);
+
+  const generateKey = (id) => new Date().getTime() + id;
   return (
-    <div>
+    <Container>
       <CompetenceWrapper theme={theme}>Mes compétences</CompetenceWrapper>
       <CompetencesWrapper>
-        {competences.map((competence, id) => (
-          <div className="">
-            <Item key={id}>{competence}</Item>
-            {/* <LinearProgress></LinearProgress> */}
-          </div>
-        ))}
+        <Techno>
+          <Button>Front-end</Button>
+        </Techno>
+        <Technos>
+          {front.map((competence, id) => (
+            <div className="">
+              <Item theme={theme} key={generateKey(id)}>
+                {competence}
+              </Item>
+            </div>
+          ))}
+        </Technos>
       </CompetencesWrapper>
-    </div>
+      {/* back-end */}
+      <CompetencesWrapper>
+        <Techno>
+          <Button>Back-end</Button>
+        </Techno>
+        <Technos>
+          {back.map((competence, id) => (
+            <div className="">
+              <Item theme={theme} key={generateKey(id)}>
+                {competence}
+              </Item>
+            </div>
+          ))}
+        </Technos>
+      </CompetencesWrapper>
+    </Container>
   );
 };
 
