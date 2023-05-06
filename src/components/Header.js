@@ -66,15 +66,13 @@ const Header = () => {
       <div className="profil">
         <WelcomeWrapper theme={theme}>Salut! Je suis</WelcomeWrapper>
         <NameWrapper theme={theme}>Sawadogo Hamed</NameWrapper>
-        <DjobWrapper theme={theme}>
-          Ingénieur et developpeur de Javascript
-        </DjobWrapper>
+        <DjobWrapper theme={theme}>développeur logiciel</DjobWrapper>
         <div className="about-profil">
           <MeWrapper theme={theme}>
-            Je suis Développeur javacript spécialisé dans le developement
-            logiciel Web et mobile je conçois sur mesure des applications sur
-            mesure en utlisant des technologies de pointe utilisés par le geants
-            de la Tech
+            Je suis étudiant en Licence 2 de <a href="#">Génie informatique</a>{" "}
+            a L'université <a href="#">Aube Nouvelle</a> Passionné de
+            developement logiciel avec une forte capacité d'apdatation et de
+            bonnes compétences en developpement informatique
           </MeWrapper>
         </div>
         <Button onClick={() => download()} theme={theme}>
