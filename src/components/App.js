@@ -6,6 +6,7 @@ import Portfolio from "../pages/Portfolio";
 import Footer from "./Footer";
 import Tools from "./Tools";
 import Competences from "./Competences";
+
 const App = () => {
   return (
     <>

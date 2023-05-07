@@ -7,7 +7,6 @@ const HtmlGlobalStyled = createGlobalStyle`
  background:${({ theme }) => (theme === "light" ? "#f1f1f1" : " #0a192f")};
 }
 `;
-
 const GlobalStyle = () => {
   const theme = useSelector((state) => state.theme.theme);
   return <HtmlGlobalStyled theme={theme} />;

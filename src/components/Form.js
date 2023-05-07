@@ -4,6 +4,31 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { colors } from "../utils/styles";
 
+const FormContainer = styled.div`
+  padding: 10px;
+`;
+const FormWrapper = styled.form`
+  display: grid;
+  margin: 10px auto;
+  justify-content: center;
+  transition: 0.3s ease;
+  position: relative;
+`;
+const Button = styled.button`
+  padding: 10px;
+  margin: 5px 0;
+  color: #f1f1f1;
+  background: #11c784;
+  border-radius: 5px;
+  border: transparent;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.077);
+  }
+`;
 const ContactWrapper = styled.h3`
   transition: 0.3s ease;
   text-align: center;
@@ -20,16 +45,39 @@ const LabelWrapper = styled.label`
   color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
   font-size: 0.8rem;
 `;
+
+const InputWrapper = styled.input`
+  display: block;
+  transition: 0.3s ease;
+  padding: 10px;
+  margin: 5px 0;
+  border: 4px;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+
+  &::placeholder {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+  }
+`;
+const Textarea = styled.textarea`
+  display: block;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-seri;
+  &::placeholder {
+    font-size: 1rem;
+    font-family: "Poppins", sans-seri;
+  }
+`;
 const From = () => {
   const [error, setError] = useState(false);
   const [email, setEmail] = useState("");
   const [userName, setUsername] = useState("");
   const [message, setMessage] = useState("");
-  const [isDisabled, setDisabled] = useState(false);
-
-  useEffect(() => {
-    setDisabled(userName.length > 0 && email.length > 0 && message.length > 0);
-  }, [email, userName, message]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,7 +88,6 @@ const From = () => {
         message: message,
       };
       console.log(Objmessage);
-      setDisabled(false);
       setEmail("");
       setMessage("");
       setUsername("");
@@ -51,52 +98,65 @@ const From = () => {
   };
   const theme = useSelector((state) => state.theme.theme);
   return (
-    <div className="form-container">
+    <FormContainer>
       <ContactWrapper theme={theme}>Me contacter</ContactWrapper>
-      <form onSubmit={(e) => handleSubmit(e)} action="" className="formulaire">
+      <FormWrapper
+        onSubmit={(e) => handleSubmit(e)}
+        action=""
+        className="formulaire"
+      >
         {/* firstname */}
-        <LabelWrapper htmlFor="username" theme={theme}>
-          votre nom
-        </LabelWrapper>
-        <input
-          type="text"
-          name="username"
-          placeholder="votre nom"
-          autoComplete="off"
-          value={userName}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        {/* email */}
-        <LabelWrapper theme={theme} htmlFor="email">
-          votre adresse mail
-        </LabelWrapper>
-        <input
-          type="email"
-          name="email"
-          id=""
-          placeholder="votre email"
-          autoComplete="off"
-          required
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-        <LabelWrapper theme={theme} htmlFor="message">
-          votre message
-        </LabelWrapper>
+        <div className="first">
+          <LabelWrapper htmlFor="username" theme={theme}>
+            votre nom
+          </LabelWrapper>
+          <InputWrapper
+            type="text"
+            name="username"
+            placeholder="votre nom"
+            autoComplete="off"
+            value={userName}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
 
-        <textarea
-          name="message"
-          id=""
-          placeholder="votre message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button type="submit">Me Contacter</button>
-      </form>
-    </div>
+        {/* email */}
+        <div className="email">
+          <LabelWrapper theme={theme} htmlFor="email">
+            votre adresse mail
+          </LabelWrapper>
+          <InputWrapper
+            type="email"
+            name="email"
+            id=""
+            placeholder="votre email"
+            autoComplete="off"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+        </div>
+
+        <div className="mess">
+          <LabelWrapper theme={theme} htmlFor="message">
+            votre message
+          </LabelWrapper>
+
+          <Textarea
+            name="message"
+            id=""
+            placeholder="votre message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            cols="30"
+            rows="10"
+          ></Textarea>
+        </div>
+
+        <Button type="submit">Me Contacter</Button>
+      </FormWrapper>
+    </FormContainer>
   );
 };
 
