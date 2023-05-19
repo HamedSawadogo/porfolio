@@ -20,18 +20,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.navigation {
-  width: 100%;
-  z-index: 10000;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1px;
-  background: #11c784;
-  position: fixed;
-  transition: 0.3s ease;
-}
 .navigation #toogle {
   font-size: 2.2rem;
   cursor: pointer;
@@ -72,10 +60,12 @@ body {
 }
 .navigation .nav-active {
   color: #0a192f;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 .navigation a {
   margin: 0 10px;
-  color: rgb(245, 247, 249);
+  color: black;
   text-decoration: none;
   font-size: 0.9rem;
   font-family: "Poppins", sans-serif;
@@ -99,6 +89,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.profil-container a {
+  text-decoration: none;
+  color: #f1f1f1;
 }
 .profil-container .profil {
   text-align: center;
@@ -163,82 +157,6 @@ body {
   box-shadow: 15px -11px 3px 0px #11c784;
 }
 
-.form-container {
-  padding: 10px;
-}
-.form-container h3 {
-  transition: 0.3s ease;
-  text-align: center;
-  font-family: "Fira Sans", sans-serif;
-  color: rgb(245, 247, 249);
-  margin: 50px auto;
-  width: 160px;
-  border-bottom: 3px solid #11c784;
-  display: block;
-  padding: 10px;
-}
-.form-container form {
-  display: grid;
-  margin: 10px auto;
-  justify-content: center;
-  transition: 0.3s ease;
-  position: relative;
-}
-.form-container form label {
-  font-family: "Poppins", sans-serif;
-  color: rgba(241, 241, 241, 0.6980392157);
-  font-size: 1rem;
-}
-.form-container form input {
-  transition: 0.3s ease;
-  width: 400px;
-  padding: 10px;
-  margin: 5px 0;
-  border: 4px;
-  outline: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form input::-moz-placeholder {
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form input::placeholder {
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form textarea {
-  width: 100%;
-  outline: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form textarea::-moz-placeholder {
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form textarea::placeholder {
-  font-size: 1rem;
-  font-family: "Poppins", sans-serif;
-}
-.form-container form button {
-  width: 200px;
-  padding: 10px;
-  margin: 5px 0;
-  color: #f1f1f1;
-  background: #11c784;
-  border-radius: 5px;
-  border: transparent;
-  font-size: 1.1rem;
-  transition: 0.3s ease;
-}
-.form-container form button:hover {
-  cursor: pointer;
-  transform: scale(1.077);
-}
-
 .networks-container {
   display: flex;
   justify-content: center;
@@ -267,69 +185,6 @@ body {
   transform: translateY(-5px);
 }
 
-.project-container {
-  width: 100%;
-  border: 1px solid rgba(241, 241, 241, 0.2392156863);
-  transition: 0.3s ease;
-  min-width: 300px;
-  margin: 10px auto;
-  border-radius: 8px;
-  height: auto;
-}
-.project-container .content {
-  padding: 10px;
-}
-.project-container .visit {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 5px;
-}
-.project-container #github {
-  font-size: 1.5rem;
-  color: #babfc6;
-  padding: 10px;
-}
-.project-container #visiter {
-  color: #f1f1f1;
-  font-size: 1.1rem;
-  font-family: "Fira Sans", sans-serif;
-  text-decoration: none;
-}
-.project-container img {
-  height: 70%;
-  width: 100%;
-  cursor: pointer;
-  transition: 0.3s ease;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.project-container img:hover {
-  opacity: 0.7;
-}
-.project-container li {
-  font-family: "Fira Sans", sans-serif;
-  color: #f1f1f1;
-  font-size: 0.9rem;
-  list-style: none;
-}
-.project-container h5 {
-  font-family: "Poppins", sans-serif;
-  color: #11c784;
-  font-size: 1.3rem;
-  opacity: 0.8;
-}
-.project-container h4 {
-  font-family: "Inter", sans-serif;
-  color: #f1f1f1;
-  font-size: 1.3rem;
-  padding: 6px 6px 0 0;
-}
-.project-container p {
-  font-family: "Inter", sans-serif;
-  color: #f1f1f1;
-}
-
 .projects-container {
   width: 70%;
   display: flex;
@@ -337,13 +192,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.portfolio h1 {
-  color: #f1f1f1;
-  font-family: "Inter", sans-serif;
-  text-align: center;
-  padding-top: 70px;
 }
 
 .button-component {
@@ -359,6 +207,7 @@ body {
 }
 
 .footer {
+  margin-top: 100px;
   background: #041023;
   height: 70vh;
   font-family: "Fira Sans", sans-serif;
@@ -432,14 +281,6 @@ body {
   align-items: center;
 }
 
-.tools-container h3 {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  color: rgb(245, 247, 249);
-  margin: 70px auto;
-  border-bottom: 2px solid #11c784;
-  width: 180px;
-}
 .tools-container .tools {
   display: flex;
   justify-content: center;

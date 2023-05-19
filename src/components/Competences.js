@@ -97,5 +97,4 @@ const Competences = () => {
     </Container>
   );
 };
-
 export default Competences;
