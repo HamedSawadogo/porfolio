@@ -60,8 +60,6 @@ const Button = styled.button`
 `;
 const Competences = () => {
   const theme = useSelector((state) => state.theme.theme);
-
-  const generateKey = (id) => new Date().getTime() + id;
   return (
     <Container>
       <CompetenceWrapper theme={theme}>Mes compétences</CompetenceWrapper>
@@ -71,11 +69,9 @@ const Competences = () => {
         </Techno>
         <Technos>
           {front.map((competence, id) => (
-            <div className="">
-              <Item theme={theme} key={generateKey(id)}>
-                {competence}
-              </Item>
-            </div>
+            <Item theme={theme} key={id + new Date().getTime()}>
+              {competence}
+            </Item>
           ))}
         </Technos>
       </CompetencesWrapper>
@@ -86,11 +82,9 @@ const Competences = () => {
         </Techno>
         <Technos>
           {back.map((competence, id) => (
-            <div className="">
-              <Item theme={theme} key={generateKey(id)}>
-                {competence}
-              </Item>
-            </div>
+            <Item theme={theme} key={id + new Date().getTime()}>
+              {competence}
+            </Item>
           ))}
         </Technos>
       </CompetencesWrapper>

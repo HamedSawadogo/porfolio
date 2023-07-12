@@ -3,26 +3,34 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import { colors } from "../utils/styles";
+import SendIcon from "@mui/icons-material/Send";
 
 const FormContainer = styled.div`
-  padding: 10px;
+  width: 60%;
+  justify-content: center;
+  margin: 0 auto;
 `;
 const FormWrapper = styled.form`
   display: grid;
+  grid-template-columns: 1fr;
   margin: 10px auto;
   justify-content: center;
   transition: 0.3s ease;
   position: relative;
 `;
 const Button = styled.button`
-  padding: 10px;
-  margin: 5px 0;
+  padding: 6px;
+  margin: 10px 0;
   color: #f1f1f1;
   background: #11c784;
   border-radius: 5px;
   border: transparent;
   font-size: 1.1rem;
   transition: 0.3s ease;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     cursor: pointer;
@@ -30,18 +38,21 @@ const Button = styled.button`
   }
 `;
 const ContactWrapper = styled.h3`
-  transition: 0.3s ease;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
-  margin: 50px auto;
-  width: 160px;
-  border-bottom: 3px solid ${colors.color1};
   display: block;
-  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  color: ${({ theme }) => (theme === "light" ? "rgb(22, 21, 19)" : "#f1f1f1")};
+  text-align: center;
+  width: 200px;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  padding-top: 50px;
+  margin: 5px auto;
+  text-transform: uppercase;
 `;
 const LabelWrapper = styled.label`
   font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-top: 5px;
   color: ${({ theme }) => (theme === "light" ? "#333" : "#f1f1f1")};
   font-size: 0.8rem;
 `;
@@ -55,6 +66,7 @@ const InputWrapper = styled.input`
   outline: none;
   border-radius: 10px;
   font-size: 1rem;
+  width: 100%;
   font-family: "Poppins", sans-serif;
 
   &::placeholder {
@@ -65,9 +77,11 @@ const InputWrapper = styled.input`
 const Textarea = styled.textarea`
   display: block;
   outline: none;
+  width: 100%;
   border-radius: 10px;
   font-size: 1rem;
   font-family: "Poppins", sans-seri;
+  border: 1px solid #f1f1f1;
   &::placeholder {
     font-size: 1rem;
     font-family: "Poppins", sans-seri;
@@ -107,9 +121,7 @@ const From = () => {
       >
         {/* firstname */}
         <div className="first">
-          <LabelWrapper htmlFor="username" theme={theme}>
-            votre nom
-          </LabelWrapper>
+          <LabelWrapper theme={theme}>votre nom</LabelWrapper>
           <InputWrapper
             type="text"
             name="username"
@@ -123,13 +135,10 @@ const From = () => {
 
         {/* email */}
         <div className="email">
-          <LabelWrapper theme={theme} htmlFor="email">
-            votre adresse mail
-          </LabelWrapper>
+          <LabelWrapper theme={theme}>votre adresse mail</LabelWrapper>
           <InputWrapper
             type="email"
             name="email"
-            id=""
             placeholder="votre email"
             autoComplete="off"
             required
@@ -139,13 +148,10 @@ const From = () => {
         </div>
 
         <div className="mess">
-          <LabelWrapper theme={theme} htmlFor="message">
-            votre message
-          </LabelWrapper>
+          <LabelWrapper theme={theme}>votre message</LabelWrapper>
 
           <Textarea
             name="message"
-            id=""
             placeholder="votre message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -154,7 +160,12 @@ const From = () => {
           ></Textarea>
         </div>
 
-        <Button type="submit">Me Contacter</Button>
+        <Button type="submit">
+          Envoyer{" "}
+          <SendIcon
+            style={{ fontSize: 30, marginLeft: 10, color: "aliceblue" }}
+          />
+        </Button>
       </FormWrapper>
     </FormContainer>
   );

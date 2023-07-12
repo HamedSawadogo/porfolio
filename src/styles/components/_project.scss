@@ -1,74 +1,22 @@
-.project-container {
-   // width: 100%;
-   // border: 1px solid #f1f1f13d;
-   // transition: .3s ease;
-   // min-width: 300px;
-   // margin: 10px auto;
-   // border-radius: 8px;
-   // height: auto;
+.project-item {
+   transition: 0.3s ease;
+   margin: 10px auto;
+   overflow: hiden;
+   height: 400px;
+   display: grid;
+   grid-template-columns: 65% 35%;
 
-   // .content {
-   //    padding: 10px;
-   // }
+   @media screen and (max-width:1090px) {
+      grid-template-columns: 60% 40%;
+   }
 
+   @media screen and (max-width:911px) {
+      grid-template-columns: 55% 45%;
+   }
 
-   // .visit {
-   //    display: flex;
-   //    align-items: flex-end;
-   //    justify-content: space-between;
-   //    padding: 5px;
-
-   // }
-
-   // #github {
-   //    font-size: 1.5rem;
-   //    color: #babfc6;
-   //    padding: 10px;
-   // }
-
-   // #visiter {
-   //    color: #f1f1f1;
-   //    font-size: 1.1rem;
-   //    font-family: $font2;
-   //    text-decoration: none;
-   // }
-
-   // img {
-   //    height: 70%;
-   //    width: 100%;
-   //    cursor: pointer;
-   //    transition: .3s ease;
-   //    object-fit: cover;
-
-   //    &:hover {
-   //       opacity: .7;
-
-   //    }
-   // }
-
-   // li {
-   //    font-family: $font2;
-   //    color: #f1f1f1;
-   //    font-size: .9rem;
-   //    list-style: none;
-   // }
-
-   // h5 {
-   //    font-family: $font4;
-   //    color: #11c784;
-   //    font-size: 1.3rem;
-   //    opacity: .8;
-   // }
-
-   // h4 {
-   //    font-family: $font3;
-   //    color: #f1f1f1;
-   //    font-size: 1.3rem;
-   //    padding: 6px 6px 0 0;
-   // }
-
-   // p {
-   //    font-family: $font3;
-   //    color: #f1f1f1;
-   // }
+   @media screen and (max-width:800px) {
+      height: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+   }
 }

@@ -54,7 +54,6 @@ const Header = () => {
 
   const download = () => {
     const dow = document.getElementById("dow");
-    console.log(dow.getAttribute);
     dow.setAttribute("href", "cv.pdf");
     dow.innerHTML = "telechargement ...";
     setTimeout(() => {
@@ -65,18 +64,15 @@ const Header = () => {
     <div className="profil-container">
       <div className="profil">
         <WelcomeWrapper theme={theme}>Salut! Je suis</WelcomeWrapper>
-        <NameWrapper theme={theme}>Sawadogo Hamed</NameWrapper>
+        <NameWrapper theme={theme}>SAWADOGO Hamed</NameWrapper>
         <DjobWrapper theme={theme}>développeur logiciel</DjobWrapper>
         <div className="about-profil">
           <MeWrapper theme={theme}>
-            Je suis étudiant en Licence 2 de <a href="#">Génie informatique</a>{" "}
-            a L'université <a href="#">Aube Nouvelle</a> Passionné de
-            developement logiciel avec une forte capacité d'apdatation et de
-            bonnes compétences en developpement informatique
+            I am Student And Software engenieer
           </MeWrapper>
         </div>
         <Button onClick={() => download()} theme={theme}>
-          <a href="" download id="dow">
+          <a href="cv.pdf" download id="dow">
             Télecharger mon CV
           </a>
         </Button>

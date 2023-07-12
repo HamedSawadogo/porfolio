@@ -6,6 +6,7 @@ import Portfolio from "../pages/Portfolio";
 import Footer from "./Footer";
 import Tools from "./Tools";
 import Competences from "./Competences";
+import Form from "./Form";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Tools />
       <Competences />
       <Portfolio />
+      <Form />
       <Footer />
     </>
   );

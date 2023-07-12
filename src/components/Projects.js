@@ -2,18 +2,15 @@ import React from "react";
 import { projectsData } from "../assets/projectsData";
 import Project from "./Project";
 import styled from "styled-components";
+import "../styles/components/_projects.scss";
 
-const ProjectsWrapper = styled.div`
-  width: 85%;
-  margin: 0 auto;
-`;
 const Projects = () => {
   return (
-    <ProjectsWrapper>
+    <div className="projects-container">
       {projectsData.map((project, id) => (
-        <Project data={project} key={id} />
+        <Project data={project} key={id + new Date().getTime()} />
       ))}
-    </ProjectsWrapper>
+    </div>
   );
 };
 export default Projects;

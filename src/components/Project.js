@@ -1,16 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-
-const ProjectWrapper = styled.div`
-  width: 100%;
-  transition: 0.3s ease;
-  margin: 10px auto;
-  overflow: hiden;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 60% 40%;
-`;
+import "../styles/components/_project.scss";
 
 const TechnosWrapper = styled.h5`
   font-family: "Poppins", sans-serif;
@@ -82,7 +73,7 @@ const ContentWrapper = styled.div`
 const Project = ({ data }) => {
   const theme = useSelector((state) => state.theme.theme);
   return (
-    <ProjectWrapper theme={theme}>
+    <div className="project-item">
       {/* partie image */}
       <div className="image-block">
         <ImageWrapper
@@ -123,7 +114,7 @@ const Project = ({ data }) => {
           )}
         </VisitWrapperContainer>
       </ContentWrapper>
-    </ProjectWrapper>
+    </div>
   );
 };
 
