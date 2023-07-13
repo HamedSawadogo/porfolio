@@ -68,7 +68,7 @@ const Header = () => {
         <DjobWrapper theme={theme}>développeur logiciel</DjobWrapper>
         <div className="about-profil">
           <MeWrapper theme={theme}>
-            I am Student And Software engenieer
+            I am a student and a software engineer
           </MeWrapper>
         </div>
         <Button onClick={() => download()} theme={theme}>

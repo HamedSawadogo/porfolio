@@ -29,10 +29,13 @@ const About = () => {
         <div className="about">
           <div className="about-left">
             <TextWrapper theme={theme}>
-              Hello! My name is Hamed and I enjoy creating things that live on
-              the internet. My interest in web development started back in 2012
-              when I decided to try editing custom Tumblr themes — turns out
-              hacking together a custom reblog button taught me a lot about HTML
+              I am a Software Developer and Computer Science student with a
+              passion for solving complex problems and creating unique and
+              intuitive user experiences. I have over a year of experience in
+              designing and developing dynamic and responsive websites with
+              React, Redux and SCSS. As well as API REST in Node Js, and Spring
+              boot I am also competent only in close collaboration with the
+              members of the team.
             </TextWrapper>
           </div>
           <div className="about-right">

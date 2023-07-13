@@ -9,6 +9,7 @@ const FormContainer = styled.div`
   width: 60%;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 50px;
 `;
 const FormWrapper = styled.form`
   display: grid;
@@ -101,7 +102,7 @@ const From = () => {
         mail: email,
         message: message,
       };
-      console.log(Objmessage);
+
       setEmail("");
       setMessage("");
       setUsername("");
