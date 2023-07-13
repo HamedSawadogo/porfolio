@@ -43,6 +43,5 @@ export const projectsData = [
     title: "Mon portfolio",
     description: "Mon site de présentation ",
     technos: ["react js", "scss", "redux toolkit", "react-router", "emailJs"],
-    url: "https://sawadogoxxx.github.io/GamingCampus/",
   },
 ];
